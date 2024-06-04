@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:black;
+}
+nav{
+    width:100%;
+    height:60px;
+    background: linear-gradient(to left, rgb(92, 197, 216), rgb(149, 220, 233));
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+ul{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.login{
+    font-size:1.3rem;
+    padding:0;
+    margin:0px;
+}
+nav ul li{
+    list-style-type:none;
+    padding:5px;
+    font-size:1.8rem;
+    margin:0px 2rem;
+    cursor:pointer;
+}
+nav ul li:last-child{
+    color: red;
+}
+.searchdiv{
+    width:30%;
+    border-radius:5px;
+    padding:0.1rem 0.6rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:1.5rem auto;
+    background-color:#fff;
+    /* display:none; */
+}
+.searchdiv:hover{
+    border:2px solid rgb(19, 123, 175);
+}
+input{
+    width:100%;
+    padding:0.5rem;
+    margin-left:1rem;
+    outline:none;
+    border:none;
+    background:transparent;
+}
+.displaymovie{
+    width:50%;
+    margin:auto;
+    text-align:center;
+    background-color:#fff;
+    border:2px solid pink;
+}
+#searchimg{
+    width:25%;
+    height:250px;
+    display:block;
+    margin:auto;
+    border:2px solid pink;
+    /* display:none; */
+
+}
+.displaymovie{
+    width:45%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.movieimg{
+    width:50%;
+    height:300px;
+    border:2px solid gray;
+}
+.movieimg img{
+    width:100%;
+    height:100%;
+}
+.movieinfo{
+    width:60%;
+    height:300px;
+}
+.wraper1{
+    height:100vh;
+    background-image:url('images/bg2.avif');
+    background-repeat:no-repeat;
+    background-size:cover;
+    opacity:0.9;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+#logo{
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(184, 50, 50);
+    font-weight:bold;
+    cursor:pointer;
+}
+.movies{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    color:white;
+    width:100%;
+    padding:2rem;
+}
+.movie{
+    min-width:20%;
+    height:350px;
+    margin:1.5rem;
+    background-color:#fff;
+    box-shadow:4px 4px 10px #2287c2;
+}
+.main {
+    width: 100%;
+    height: 280px;
+    color: black;
+    position: relative;
+}
+.movie .image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid pink;
+    transition: transform 1s ease;
+}
+.main:hover .image{
+    transform: rotateY(-90deg); 
+}
+.movie .infodiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hide infodiv */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    transition: opacity 1s ease; /* Transition opacity for smooth reveal */
+    padding:1rem;
+}
+.infodiv{
+    overflow:auto;
+}
+.main:hover .infodiv {
+    opacity: 1; /* Show infodiv on hover */
+}
+.movie h4,h3{
+    margin: 1rem 0px;
+}
+.movie h3{
+    color:black;
+    text-align:center;
+}
+.show-movie{
+    width:100%;
+}
+@media only screen and (max-width:1200px){
+    .movie{
+        width:30%;
+        margin:1rem 0.5rem;
+    }
+    .displaymovie{
+        width:70%;
+    }
+    .searchdiv{
+        width:40%;
+    }
+}
+@media only screen and (max-width:900px){
+     .movie{
+         width:35%;
+         margin:0.5rem;
+     }
+     #searchimg{
+        width:30%;
+     }
+     .searchdiv{
+        width:55%;
+    }
+
+ }
+ @media only screen and (max-width:800px){
+    .displaymovie{
+        width:80%;
+        height:auto;
+    }
+    #searchimg{
+        height:200px;
+        width:40%;
+    }
+    .movieinfo,.movieimg{
+        width:100%;
+        height:250px;
+    }
+    .movieinfo{
+        padding:1rem 0.4rem;
+    }
+}
+@media only screen and (max-width:500px){
+   header ul li,nav ul li{
+        font-size:0.8rem;
+        padding:5px;
+        margin:5px;
+        color:green;
+    }
+    .searchdiv{
+        width:65%;
+    }
+    #searchimg{
+        width:50%;
+        height:180px;
+    }
+    nav{
+        height:40px;
+    }
+    .movie{
+        width:75%;
+    }
+    .displaymovie{
+        width:70%;
+        flex-direction:column;
+        height:auto;
+    }
+    .movieinfo,.movieimg{
+        width:100%;
+        height:250px;
+    }
+    .movieinfo{
+        height:auto;
+        padding:1rem 0.4rem;
+    }
+
+}
