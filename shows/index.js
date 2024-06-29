@@ -34,6 +34,7 @@ function getmovie() {
 function showmovies(arr) {
     movies.innerHTML = '';
     arr.forEach((movie) => {
+        console.log(movie);
         const movieDiv = document.createElement('div');
         movieDiv.classList.add('movie');
         movieDiv.innerHTML = `
@@ -41,7 +42,9 @@ function showmovies(arr) {
                <a href='show.html' target='_blank'><img class="image" src="${movie.show.image.original}" alt="Movie Poster"></a>
                 <a href="show.html"><div class="infodiv">
                     <h4>Title: <span class="info">${movie.show.genres}</span></h4>
-                    <h4>Publish Year: <span class="info">${movie.show.summary}</span></h4>
+                    <h4>Type: <span class="info">${movie.show.type}</span></h4>
+                    <h4>Type: <span class="info">${movie.show.language}</span></h4>
+                    <h4>Publish Summary: <span class="info">${movie.show.summary}</span></h4>
                 </div></a>
             </div>
             <h3>Title: <span>${movie.show.name}</span></h3>

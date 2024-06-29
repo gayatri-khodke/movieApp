@@ -112,6 +112,7 @@ a{
 }
 .movies{
     display:flex;
+    justify-content:center;
     flex-direction: row;
     flex-wrap:wrap;
     color:white;
